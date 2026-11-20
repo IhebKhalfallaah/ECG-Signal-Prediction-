@@ -15,6 +15,9 @@ app/static/plots/
 
 # Data (download from PhysioNet, see data/README.md)
 data/raw/
+data/work/
+notebooks/*.pkl
+notebooks/*.csv
 *.zip
 
 # Notebooks
