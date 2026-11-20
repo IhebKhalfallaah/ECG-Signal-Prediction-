@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction - HeartScan AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.67/build/spline-viewer.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+
+    <!-- 3D Heart Spline - Bottom left corner -->
+    <div class="hidden lg:block absolute left-20 top-20 w-[400px] h-[400px] z-0">
+        <spline-viewer url="https://prod.spline.design/FsICx2cotN6a8K8n/scene.splinecode"
+            class="w-full h-full"></spline-viewer>
+    </div>
+
+    <!-- Form Container -->
+    <div
+        class="relative z-10 bg-white shadow-2xl rounded-2xl p-10 max-w-2xl w-full border border-gray-200 backdrop-blur-sm">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-8">ECG Prediction Form</h2>
+<form id="predictionForm" method="POST" enctype="multipart/form-data" action="/Predict" class="space-y-6"
+    onsubmit="return validateForm()">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Nom et prénom -->
+        <div>
+            <label class="block text-gray-700 mb-2 font-medium">Nom et prénom</label>
+            <input id="name" type="text" name="name" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm">
+        </div>
+
+        <!-- Numéro de téléphone -->
+        <div>
+            <label class="block text-gray-700 mb-2 font-medium">Numéro de téléphone</label>
+            <input id="phone" type="tel" name="phone" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm">
+        </div>
+
+        <!-- Date de naissance -->
+        <div>
+            <label class="block text-gray-700 mb-2 font-medium">Date de naissance</label>
+            <input id="dob" type="date" name="dob" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm">
+        </div>
+
+        <!-- Adresse -->
+        <div>
+            <label class="block text-gray-700 mb-2 font-medium">Adresse</label>
+            <input id="address" type="text" name="address" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm">
+        </div>
+
+        <!-- Poids -->
+        <div>
+            <label class="block text-gray-700 mb-2 font-medium">Poids (kg)</label>
+            <input id="weight" type="number" step="0.1" name="weight"
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm">
+        </div>
+
+        <!-- Taille -->
+        <div>
+            <label class="block text-gray-700 mb-2 font-medium">Taille (cm)</label>
+            <input id="height" type="number" step="0.1" name="height"
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm">
+        </div>
+
+        <!-- Sexe -->
+        <div class="col-span-2">
+            <label class="block text-gray-700 mb-2 font-medium">Sexe</label>
+            <div class="flex gap-6">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="sexe" value="Homme" class="form-radio text-red-600" required>
+                    <span class="ml-2">Homme</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="sexe" value="Femme" class="form-radio text-red-600">
+                    <span class="ml-2">Femme</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Symptômes -->
+        <div class="col-span-2">
+            <label class="block text-gray-700 mb-2 font-medium">Symptômes</label>
+            <textarea name="symptomes" rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 shadow-sm"
+                placeholder="Décrivez les symptômes du patient..."></textarea>
+        </div>
+    </div>
+
+    <!-- ECG Upload -->
+    <div>
+        <label class="block text-gray-700 mb-2 font-medium">Upload ECG Folder</label>
+        <input id="ecg_files" type="file" name="ecg_files" webkitdirectory directory required
+            class="block w-full text-gray-700 border border-gray-300 rounded-xl px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-red-400">
+        <small class="text-gray-500 text-sm mt-1 block">Select a folder containing .dat, .xyz, and .hea files.</small>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit"
+        class="w-full bg-red-600 text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition">
+        Submit for Prediction
+    </button>
+</form>
+
+    </div>
+
+    <!-- JS for client-side validation -->
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const dob = document.getElementById('dob').value;
+            const address = document.getElementById('address').value.trim();
+            const ecgFiles = document.getElementById('ecg_files').files;
+
+            if (!name || !phone || !dob || !address || ecgFiles.length === 0) {
+                alert('Please fill in all fields and upload at least one ECG file.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

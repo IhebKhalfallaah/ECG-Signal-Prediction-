@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ECG Ischemia Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.67/build/spline-viewer.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .quote {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Container -->
+    <div class="relative min-h-[600px] mb-16 flex flex-col lg:flex-row items-center justify-center">
+
+     <!-- 3D Heart - hidden on mobile -->
+<div class="hidden lg:block absolute left-0 top-0 w-1/2 h-full flex flex-col justify-end items-center pb-6">
+
+<img src="{{ url_for('static', filename='images/A.png') }}"
+     alt="ECG Waveform"
+     class="mt-4 w-full h-72 ">
+
+</div>
+
+        <!-- Hero Content -->
+        <div
+            class="z-10 relative w-full lg:w-1/2 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 text-center lg:text-left px-4 lg:pr-8">
+            <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
+                <span class="inline-block">Welcome to</span>
+                <span
+                    class="inline-block bg-gradient-to-r from-red-500 to-pink-600 text-transparent bg-clip-text">HeartScan
+                    AI</span>
+            </h1>
+
+            <div class="hero-text">
+                <div class="quote">
+                    « L’électrocardiogramme est la plume avec laquelle le cœur écrit son histoire électrique. »<br>
+                    — Dr. Paul Dudley White
+                </div>
+                <p>
+                    Bienvenue sur votre espace dédié à l’analyse électrocardiographique.<br><br>
+                    Nous sommes ici pour vous accompagner dans l’interprétation des signaux cardiaques,
+                    et vous aider à décoder chaque battement avec clarté et précision.<br><br>
+                    Ici, vous trouverez des réponses concrètes à vos questions cliniques,
+                    et des outils conçus pour soutenir votre expertise médicale.
+                </p>
+            </div>
+
+
+
+
+            <!-- Buttons -->
+           <!-- Buttons -->
+<div class="mt-8 flex justify-center">
+    <a href="{{ url_for('login') }}"
+       class="group relative inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-md rounded-full border border-gray-300 shadow hover:shadow-lg transition-all">
+       <span class="text-red-600 font-bold">Login</span>
+    </a>
+</div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

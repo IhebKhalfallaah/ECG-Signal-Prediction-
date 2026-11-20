@@ -1,0 +1,25 @@
+{
+  "prediction": "angine",
+  "metrics_iii": {
+    "duration_segment2": 0.928,
+    "st_duration": 0.348,
+    "s2_relative_to_r2": 0.024,
+    "t2_relative_to_r2": 0.372,
+    "qt_interval": 1.272,
+    "amp_q2": 0.0037679901264453305,
+    "amp_r2": 0.08064649816274849,
+    "amp_s2": -0.44541832823406335,
+    "qs_duration": 0.072
+  },
+  "metrics_v4": {
+    "duration_segment2": 0.932,
+    "st_duration": 0.208,
+    "s2_relative_to_r2": 0.044,
+    "t2_relative_to_r2": 0.252,
+    "qt_interval": 1.164,
+    "amp_q2": -0.12810691227015567,
+    "amp_r2": 1.8292900027495211,
+    "amp_s2": -0.083936924645788,
+    "qs_duration": 0.092
+  }
+}
