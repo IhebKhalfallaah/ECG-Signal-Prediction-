@@ -65,7 +65,7 @@ def predict():
         record_path = os.path.join(upload_folder, record)
         prediction = predict_majority_class_from_file(record_path, current_app.config["MODEL_PATH"])
         results = [{"record": record, "prediction": prediction}]
-        plots = generate_plots(record_path, record, label=results, plots_dir=current_app.config["PLOTS_DIR"])
+        plots = generate_plots(record_path, record, label=results, plots_dir=current_app.config["PLOTS_DIR"]) or {}
     except Exception as e:
         results = [{"record": record, "error": f"❌ Prediction failed: {str(e)}"}]
         plots = {}

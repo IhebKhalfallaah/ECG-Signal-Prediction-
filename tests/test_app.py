@@ -92,3 +92,16 @@ def test_predict_sample_end_to_end(client, app, golden, monkeypatch):
 
 def test_model_not_in_static(client):
     assert client.get("/static/svm_model_C60_gamma001.pkl").status_code == 404
+
+
+def test_predict_record_without_required_leads_shows_error(client, tmp_path):
+    import numpy as np
+    import wfdb
+
+    signal = np.random.default_rng(0).normal(size=(5000, 2))
+    wfdb.wrsamp("nolead", fs=250, units=["mV", "mV"], sig_name=["I", "V4"], p_signal=signal,
+                fmt=["16", "16"], write_dir=str(tmp_path))
+    files = [(f"nolead.{ext}", (tmp_path / f"nolead.{ext}").read_bytes()) for ext in ("dat", "hea")]
+    response = _upload(client, files + [("nolead.atr", b"x")])
+    assert response.status_code == 200
+    assert "Prediction: Error: no features extracted" in response.get_data(as_text=True)
