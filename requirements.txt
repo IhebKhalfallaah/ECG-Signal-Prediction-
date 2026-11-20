@@ -6,3 +6,4 @@ scikit-learn==1.6.1
 joblib==1.5.1
 wfdb==4.3.0
 matplotlib==3.10.3
+pyparsing==3.2.3  # newer versions emit deprecation warnings with matplotlib 3.10
