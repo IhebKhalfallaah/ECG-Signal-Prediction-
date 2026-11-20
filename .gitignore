@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Runtime artifacts
+uploads/
+app/static/plots/
+
+# Data (download from PhysioNet, see data/README.md)
+data/raw/
+*.zip
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Tooling
+.superpowers/
+.idea/
+.vscode/
