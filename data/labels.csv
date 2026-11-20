@@ -1,0 +1,112 @@
+record,label,label_name,source
+e0103,1,angine,European ST-T
+e0104,2,infactus,European ST-T
+e0105,2,infactus,European ST-T
+e0107,1,angine,European ST-T
+e0108,2,infactus,European ST-T
+e0111,1,angine,European ST-T
+e0112,1,angine,European ST-T
+e0113,1,angine,European ST-T
+e0114,1,angine,European ST-T
+e0116,1,angine,European ST-T
+e0118,1,angine,European ST-T
+e0119,1,angine,European ST-T
+e0121,1,angine,European ST-T
+e0122,1,angine,European ST-T
+e0123,2,infactus,European ST-T
+e0124,2,infactus,European ST-T
+e0125,2,infactus,European ST-T
+e0126,2,infactus,European ST-T
+e0127,1,angine,European ST-T
+e0136,1,angine,European ST-T
+e0139,1,angine,European ST-T
+e0147,1,angine,European ST-T
+e0148,1,angine,European ST-T
+e0154,1,angine,European ST-T
+e0155,1,angine,European ST-T
+e0159,2,infactus,European ST-T
+e0161,1,angine,European ST-T
+e0162,2,infactus,European ST-T
+e0163,2,infactus,European ST-T
+e0166,2,infactus,European ST-T
+e0170,1,angine,European ST-T
+s0273lre,0,Sain,PTB
+s0274lre,0,Sain,PTB
+s0275lre,0,Sain,PTB
+s0287lre,0,Sain,PTB
+s0291lre,0,Sain,PTB
+s0292lre,0,Sain,PTB
+s0299lre,0,Sain,PTB
+s0300lre,0,Sain,PTB
+s0301lre,0,Sain,PTB
+s0302lre,0,Sain,PTB
+s0303lre,0,Sain,PTB
+s0304lre,0,Sain,PTB
+s0305lre,0,Sain,PTB
+s0306lre,0,Sain,PTB
+s0308lre,0,Sain,PTB
+s0311lre,0,Sain,PTB
+s0312lre,0,Sain,PTB
+s0322lre,0,Sain,PTB
+s0323lre,0,Sain,PTB
+s0324lre,0,Sain,PTB
+s0325lre,0,Sain,PTB
+s0328lre,0,Sain,PTB
+s0329lre,0,Sain,PTB
+s0336lre,0,Sain,PTB
+s0363lre,0,Sain,PTB
+s0374lre,0,Sain,PTB
+s0402lre,0,Sain,PTB
+s0415lre,0,Sain,PTB
+s0436_re,0,Sain,PTB
+s0452_re,0,Sain,PTB
+s0453_re,0,Sain,PTB
+s0457_re,0,Sain,PTB
+s0458_re,0,Sain,PTB
+s0459_re,0,Sain,PTB
+s0460_re,0,Sain,PTB
+s0461_re,0,Sain,PTB
+s0462_re,0,Sain,PTB
+s0463_re,0,Sain,PTB
+s0464_re,0,Sain,PTB
+s0465_re,0,Sain,PTB
+s0466_re,0,Sain,PTB
+s0467_re,0,Sain,PTB
+s0468_re,0,Sain,PTB
+s0469_re,0,Sain,PTB
+s0470_re,0,Sain,PTB
+s0471_re,0,Sain,PTB
+s0472_re,0,Sain,PTB
+s0473_re,0,Sain,PTB
+s0474_re,0,Sain,PTB
+s0475_re,0,Sain,PTB
+s0476_re,0,Sain,PTB
+s0477_re,0,Sain,PTB
+s0478_re,0,Sain,PTB
+s0479_re,0,Sain,PTB
+s0480_re,0,Sain,PTB
+s0481_re,0,Sain,PTB
+s0482_re,0,Sain,PTB
+s0483_re,0,Sain,PTB
+s0486_re,0,Sain,PTB
+s0487_re,0,Sain,PTB
+s0490_re,0,Sain,PTB
+s0491_re,0,Sain,PTB
+s0496_re,0,Sain,PTB
+s0499_re,0,Sain,PTB
+s0500_re,0,Sain,PTB
+s0502_re,0,Sain,PTB
+s0503_re,0,Sain,PTB
+s0504_re,0,Sain,PTB
+s0506_re,0,Sain,PTB
+s0526_re,0,Sain,PTB
+s0527_re,0,Sain,PTB
+s0531_re,0,Sain,PTB
+s0532_re,0,Sain,PTB
+s0533_re,0,Sain,PTB
+s0534_re,0,Sain,PTB
+s0543_re,0,Sain,PTB
+s0545_re,0,Sain,PTB
+s0551_re,0,Sain,PTB
+s0552_re,0,Sain,PTB
+s0561_re,0,Sain,PTB
