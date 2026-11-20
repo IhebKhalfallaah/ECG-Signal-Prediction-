@@ -5,7 +5,7 @@ Thanks for your interest in improving HeartScan AI!
 ## Getting set up
 
 ```bash
-git clone https://github.com/iheb-kh/ECG-Signal-Prediction-.git
+git clone https://github.com/IhebKhalfallaah/ECG-Signal-Prediction-.git
 cd ECG-Signal-Prediction-
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt

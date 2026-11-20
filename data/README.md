@@ -37,7 +37,7 @@ records; healthy labels come from the PTB control group.
 
 ## Sample record
 
-`sample/e0103` is record e0103 of the European ST-T Database (2 leads: V4 and MLIII, 250 Hz, 30 min).
+`sample/e0103` is record e0103 of the European ST-T Database (2 leads: V4 and MLIII, 250 Hz, 2 h).
 Upload its `.dat`, `.hea` and `.atr` files in the web app to try a prediction.
 
 ## Citations

@@ -96,7 +96,7 @@ Segment-level evaluation on a 70/30 split after class balancing (6,170 segments 
 ### Installation
 
 ```bash
-git clone https://github.com/iheb-kh/ECG-Signal-Prediction-.git
+git clone https://github.com/IhebKhalfallaah/ECG-Signal-Prediction-.git
 cd ECG-Signal-Prediction-
 
 python3 -m venv .venv
@@ -119,6 +119,7 @@ Credentials can be changed with environment variables:
 | `ECG_USERNAME` | `admin` | Login username |
 | `ECG_PASSWORD` | `1234` | Login password |
 | `SECRET_KEY` | `your_secret_key` | Flask secret key — set your own outside local demos |
+| `FLASK_DEBUG` | unset | Set to `1` to enable Flask debug mode |
 
 ### Try it with the sample record
 
@@ -194,7 +195,7 @@ ECG-Signal-Prediction/
 - **Concurrency** — uploads share one folder that is cleared on every prediction; not suitable for multiple simultaneous users.
 - **Labels** — class names are displayed in French (`Sain`, `angine`, `infactus`).
 - **Filter order** — the exploration notebook (02) uses Butterworth order 5, while the features and the app use order 4.
-- **Inputs** — only records containing both a V4 and a III/MLIII lead can be analysed.
+- **Inputs** — only records containing both a V4 and a III/MLIII lead can be analysed; other records return an error result.
 
 This is a research prototype and **not a medical device**; it must not be used for clinical decisions.
 
@@ -210,4 +211,4 @@ Released under the [MIT License](LICENSE). The PTB and European ST-T databases a
 
 ## Author
 
-**Iheb Khalfallah** — [@iheb-kh](https://github.com/iheb-kh)
+**Iheb Khalfallah** — [@IhebKhalfallaah](https://github.com/IhebKhalfallaah)
